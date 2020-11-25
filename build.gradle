@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group 'groupName'
+version 'versionNumber'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.codeborne', name: 'selenide', version: '5.16.1'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '3.141.59'
+//    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+    compile 'org.testng:testng:7.3.0'
+}
+
+test {
+
+    systemProperty "baseUrl", "http://cw-test.core-banking.cloud"
+    systemProperty "testng.dtd.http", "true"
+
+    //    def suite = "suites/$suiteName" + ".xml"
+    def suite = "suites/loginSuite" + ".xml"
+
+    useTestNG() {
+//        suites suite
+
+        // generate reports by TestNG library
+        useDefaultListeners = true
+
+    }
+
+    // display test events in console
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+    }
+}
