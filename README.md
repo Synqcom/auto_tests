@@ -18,5 +18,5 @@ run current suite
 notice
 
     add 
-    -DbaseUrl=https://www.vk.com 
+    -DbaseUrl= *base url* 
     to VM options if u want run tests localy    
