@@ -1,0 +1,16 @@
+[
+  {
+    "testName": "userA",
+
+    "fio": "AS50060",
+    "surname": "Mirzəyeva",
+    "name": "Azadə"
+  },
+  {
+    "testName": "userB",
+
+    "fio": "AS50060",
+    "surname": "Mirzəyeva",
+    "name": "Azadə"
+  }
+]

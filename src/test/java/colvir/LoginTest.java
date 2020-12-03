@@ -1,4 +1,4 @@
-package colvir.login;
+package colvir;
 
 import colvir.BaseTest;
 import colvir.pages.authorized.MainPage;
@@ -23,7 +23,8 @@ public class LoginTest extends BaseTest {
     @Test(dataProvider = "loginCredentialsEmail")
     public void checkWeCanLoginViaEmail(String email, String password) {
         LoginPage loginPage = open(LoginPage.URL, LoginPage.class);
-        loginPage.login(email, password);
+        loginPage.login(email, "name");
+
     }
 
 }

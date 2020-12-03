@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "io.freefair.lombok" version "5.3.0"
 }
 
 group 'groupName'
@@ -15,8 +16,10 @@ dependencies {
     compile group: 'com.codeborne', name: 'selenide', version: '5.16.1'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '3.141.59'
-//    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
     compile 'org.testng:testng:7.3.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
 }
 
 test {
